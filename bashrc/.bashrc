@@ -16,7 +16,7 @@ shopt -s histappend
 shopt -s hostcomplete
 shopt -s nocaseglob
 
-export HISTSIZE=1000
+export HISTSIZE=2000
 export HISTFILESIZE=${HISTSIZE}
 export HISTCONTROL=ignoreboth
 export EDITOR="vim"
@@ -63,13 +63,6 @@ TERM=xterm-256color
 # PS1='[\u@\h \W]\$ '
 # PS1='\[\e[1;32m\][\u@\h \W]\$\[\e[0m\] '
 PS1='\[\e[1m\]┌─[\[\033[0;47;30m\]Qiana\[\033[0;43;91m\]•\[\033[0;101;31m\]•\[\033[0;41;91m\]•\[\033[0;0m\]]──[$PWD] \n\[\e[1m\]└─[\$]\[\e[0m\] '
-
-# base_color='\[   [48;5;24m\]'
-# stripe_one_col='\[[48;5;30m[38;5;24m\]'
-# stripe_two_col='\[[48;5;36m[38;5;30m\]'
-# end_stripe_col='\[[48;5;0m[38;5;36m\]'
-
-# export PS1='$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'$base_color' '$stripe_one_col' '$stripe_two_col' '$end_stripe_col' \ [[Om\]'
 
 # cd `cat ~/.prev_dir`
 # cat /dev/null > ~/.prev_dir
