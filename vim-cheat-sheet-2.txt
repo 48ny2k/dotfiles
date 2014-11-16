@@ -33,6 +33,9 @@ Editing
 
     r - replace a single character
     J - join line below to the current one
+    gJ - joins the next line to the current line (inserts a space between the
+    two)
+    :12,24j - join lines 12 thru 24, leaving a space between each line
     cc - change (replace) entire line
     cw - change (replace) to the end of the word
     c$ - change (replace) to the end of the line
@@ -77,6 +80,7 @@ Cut and paste
     dd - delete (cut) a line
     2dd - delete (cut) 2 lines
     dw - delete (cut) word
+    d3w - delete 3 words
     D - delete (cut) to the end of the line
     d$ - delete (cut) to the end of the line
     x - delete (cut) character
@@ -125,4 +129,14 @@ Tabs
     :tabmove # - move current tab to the #th position (indexed from 0)
     :tabclose or :tabc - close the current tab and all its windows
     :tabonly or :tabo - close all tabs except for the current one
+
+Helpful commands
+
+    :colo <coloscheme> - changes colorscheme for session
+    :e filename - edit filename
+    :f filename - change current file name to filename
+    :sh - call up the shell, run commands until a ^d, then continue editing
+
+
+
 
