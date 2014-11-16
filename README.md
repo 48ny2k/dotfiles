@@ -1,1 +1,1 @@
-This is a collection of important dotfiles from my linux system
+This is a collection of dotfiles from my linux system
