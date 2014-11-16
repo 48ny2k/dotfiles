@@ -157,4 +157,4 @@ endif
 colorscheme soruby
 "---------------------------------------------------------------------
 
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
