@@ -13,11 +13,13 @@ Plugin 'gmarik/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
+
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'Lokaltog/vim-powerline'
+" Plugin 'Lokaltog/vim-powerline'
 Plugin 'scrooloose/syntastic'
+Plugin 'bling/vim_airline' 
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
