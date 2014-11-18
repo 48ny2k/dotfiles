@@ -19,7 +19,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Lokaltog/vim-easymotion'
 " Plugin 'Lokaltog/vim-powerline'
 Plugin 'scrooloose/syntastic'
-Plugin 'bling/vim_airline' 
+Plugin 'bling/vim-airline' 
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
