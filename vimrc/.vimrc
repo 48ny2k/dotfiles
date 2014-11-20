@@ -17,9 +17,61 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Lokaltog/vim-easymotion'
-" Plugin 'Lokaltog/vim-powerline'
 Plugin 'scrooloose/syntastic'
-Plugin 'bling/vim-airline' 
+Plugin 'bling/vim-airline'
+Plugin 'Lokaltog/powerline-fonts'
+Plugin 'runsisi/consolas-font-for-powerline'
+"''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+Plugin 'jeetsukumaran/vim-buffergator'
+" Buffergator lists, selects, and switches buffers
+" Use `<Leader>b` (typically: `\b`) to open a window listing all buffers. In this
+" window, you can use normal movement keys to select a buffer and then:
+" - <ENTER> to edit the selected buffer in the previous window
+" - <C-V> to edit the selected buffer in a new vertical split
+" - <C-S> to edit the selected buffer in a new horizontal split
+" - <C-T> to edit the selected buffer in a new tab page
+" https://github.com/jeetsukumaran/vim-buffergator
+"'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+Plugin 'nelstrom/vim-visual-star-search'
+" This allows you to select some text using Vim's visual mode and then hit *
+" and # to search for it elsewhere in the file. For example, hit V, select
+" a strange sequence of characters like '$! $!', and hit star. You'll find
+" all other runs of '$! $!' in the file.
+"
+" If you hit <leader>* ('\*' unless you changed the mapleader), vim will
+" recursively vimgrep for the word under the cursor or the visual selection.
+" 
+" Vim's default behavior is to just extend the visual selection to the next
+" word that matches the word under the cursor. Doesn't seem very useful.
+" https://github.com/nelstrom/vim-visual-star-search
+"'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+Plugin 'mbbill/undotree'
+" Display your undo history in a graph. Mapped to <leader(\)>u.
+" https://github.com/mbbill/undotree
+"''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+Plugin 'edkolev/tmuxline.vim'
+" Use vim/vim-airline/lightline.vim colors, so tmux and vim share the same statusline colortheme.
+" Preloaded with stock themes and presets, which can be combined anyway you want.
+" Configure tmux statusline using a simple hash, in case stock presets don't meet your needs.
+" Create a snapshot .conf file which can be sourced by tmux, no need to open vim to set your tmux statusline.
+" https://github.com/edkolev/tmuxline.vim
+"'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+Plugin 'MattesGroeger/vim-bookmarks'
+" This vim plugin allows toggling bookmarks per line.
+" A quickfix window gives access to all bookmarks.
+" Annotations can be added as well.
+" These are special bookmarks with a comment attached.
+" They are useful for preparing code reviews.
+" All bookmarks will be restored on the next startup. 
+" https://github.com/MattesGroeger/vim-bookmarks
+"'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+Plugin 'kien/ctrlp.vim'
+" Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
+" Run :CtrlP or :CtrlP [starting-directory] to invoke CtrlP in find file mode.
+" Run :CtrlPBuffer or :CtrlPMRU to invoke CtrlP in find buffer or find MRU file mode.
+" Run :CtrlPMixed to search in Files, Buffers and MRU files at the same time.
+" Check :help ctrlp-commands and :help ctrlp-extensions for other commands.
+"'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
@@ -128,7 +180,8 @@ set laststatus=2    " Always show the statusline
  
 filetype plugin indent on
 syntax on
-
+set encoding=utf-8
+" let g:Powerline_symbols = 'fancy'
 "-----------------------------------------------------------------------
 nnoremap <silent> <F5> :NERDTree<CR>
 nnoremap <silent> <F4> :PluginInstall<CR>
@@ -160,3 +213,7 @@ colorscheme soruby
 "---------------------------------------------------------------------
 
 " autocmd vimenter * NERDTree
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline_theme = 'murmur'
+" let g:airline_powerline_fonts = 1
+" set guifont=/powerline-fonts/UbuntuMono/10

@@ -39,7 +39,7 @@ alias do="cd Downloads && la"
 alias doc="cd Documents && la"
 alias pic="cd Pictures && la"
 alias vid='cd Videos && la'
-alias bm="cd /media/mike/324B5FCF4EAB3AE4/backup && ls -alhr -St && h"
+alias bm="cd /media/mike/cb8442d4-23d4-40fb-b26c-fefbe65d6cb7/backup && ls -alhr -St && h"
 alias p='pwd'
 alias dis="discover"
 alias ch='c && h'
@@ -55,8 +55,10 @@ alias dot='cd ~/github/dotfiles'
 alias ga='git add -A'
 alias gc='git commit -m'
 alias gp='git push origin master'
-alias st='git status'
-
+alias st='dot && git status'
+alias cu='crontab -u mike ~/Documents/crontab.txt'
+alias cl='crontab -l'
+alias dr='cd ~/Documents/Recipes && la'
 
 #############################################
 ####### Aliases for Arch and Manjaro ########
@@ -83,3 +85,6 @@ alias st='git status'
 # # alias a3='archey3 -c yellow'          # Shortcut to Archey3
 # alias cc='sudo cacheclean -v 2'         # Deletes all but the last two versions of installed packages in the pacman cache
 # alias yt="sh /home/mike/bin/youtubeview.sh"
+#
+#
+# 
