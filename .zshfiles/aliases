@@ -1,0 +1,158 @@
+# alias for editing aliases
+alias za='vim $HOME/.zshfiles/aliases'
+
+# ls aliases
+alias ls='ls --sort=extension --color=auto -CF'
+alias l='ls --sort=extension --color=auto -CF'
+alias lll='ls -Alh --sort=size . | tr -s " " | cut -d " " -f 5,9' # ls in sorted size, with everything else removed
+alias ll='ls -lh'
+alias lal='ls -Alh'
+alias l.='ls .[A-Za-z]*'
+alias la='ls -CF -A'
+alias dir='ls --color=auto --format=vertical'
+alias vdir='ls --color=auto --format=long'
+alias lc='ls *.cpp'
+alias lnew='ls -ld *(/om[1])' # Show the newest directory
+alias lm='ls -tld **/*(m-2)' # In the current tree, show files newer than 2 days old
+
+# Personal aliases
+# alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto'
+# alias ll='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias la='ls -Ahlrtp --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias egrep='grep --color=tty -d skip'
+# alias ls='ls --color=auto $( if [ -f .hidden ]; then cat .hidden | xargs -I {} echo -n --hide="{}"\ ; fi; )'
+# alias ls='ls --color $( if [ -f .hidden ]; then cat .hidden | xargs -I {} echo -n --hide="{}"\ ; fi; )'
+alias cp="cp -i"                          # confirm before overwriting something
+alias df='df -h'                          # human-readable sizes 
+alias dfh='df -h -x supermount'                    
+alias x='exit'                            # exit terminal
+alias c='clear'                           # clear terminal screen
+alias md='mkdir'                          # make dir
+alias del="rm"                            # remove file
+alias p3='ping -c 3 www.google.com'       # ping www.google.com to check connection
+alias leaf='leafpad'                      # open leafpad
+alias inxi='inxi -c 31 -v 4'              # System information
+alias f='free -m'                         # show sizes in MB
+alias pdd="comm -23 <(sudo find / \( -path '/dev' -o -path '/sys' -o -path '/run' -o -path '/tmp' -o -path '/mnt' -o -path '/srv' -o -path '/proc' -o -path '/boot' -o -path '/home' -o -path '/root' -o -path '/media' -o -path '/var/lib/pacman' -o -path '/var/cache/pacman' \) -prune -o -type d -print | sed 's/\([^/]\)$/\1\//' | sort -u) <(pacman -Qlq | sort -u)"
+alias bk="sh /home/mike/bin/backup.sh"    # Script to backup minus exclude.txt 	 
+alias get="sudo apt-get install"
+alias getup="sudo apt-get -y update && sudo apt-get -y upgrade"
+alias remove="sudo apt-get --purge remove"
+alias depend="sudo apt-cache depends"
+alias updb='sudo updatedb'
+alias tc="tail /var/log/syslog | ccze -A"
+alias tx="tail .xsession-errors | ccze -A"
+alias md5="md5sum"                        # check md5sum from stated dir/file
+alias b='bash'
+alias dis='cd ~/.zshfiles/functions && discover'
+alias yt='youtube-dl -f 135'
+alias wee='weechat'
+alias ac="aria2c -T"
+alias sq='sudo lsof -i -n -P | grep squid3'
+alias sp='sudo lsof -i -n -P | grep proxy'
+alias 3128='sudo lsof -i -n -P | grep 3128'
+alias h='cd /home/mike'
+alias do="cd Downloads && la"
+alias doc="cd Documents && la"
+alias pic="cd Pictures && la"
+alias vid='cd Videos && la'
+alias bm="cd /media/mike/cb8442d4-23d4-40fb-b26c-fefbe65d6cb7/backup && ls -alhr -St && h"
+alias p='pwd'
+alias dis="cd ~/.zshfiles/functions && discover"
+alias ch='c && h'
+alias cu='crontab -u mike ~/Documents/crontab.txt'
+alias cl='crontab -l ~/Documents/crontab.txt'
+alias t='tmux -2'
+alias vv='vim .vimrc'
+alias aa='vim ~/.bash/aliases'
+alias vcs='vim ~/Documents/vim_related/vim-cheat-sheet-2.txt' 
+alias gl='vim ~/Documents/grocery-list.txt'
+alias fh='vim ~/Documents/flr_history.txt'
+alias vr='cd Documents/vim_related && la'
+alias hub='cd ~/github'
+alias clone='git clone https://github.com/48ny2k/dotfiles'
+alias dot='cd ~/github/dotfiles'
+alias ga='git add -A'
+alias gc='git commit -m'
+alias gp='git push origin master'
+alias st='dot && git status'
+alias cu='crontab -u mike ~/Documents/crontab.txt'
+alias cl='crontab -l'
+alias dr='cd ~/Documents/Recipes && la'
+alias ra='ranger'
+alias s='stock'
+alias vbb='cd ~/Documents/.bashrc.bakup'
+
+
+# Make life better
+alias grep='grep -in --color'
+alias du='du -h'
+# alias df='df -h'
+alias sudo='nocorrect sudo'
+
+# Arbit aliases
+alias v='vim'
+alias cl='clear'
+alias o='kde-open'
+alias cd.='cd ..'
+alias cd..='cd ..'
+
+# ssh
+alias sa='eval $(ssh-agent);ssh-add -t 2h'
+alias sk='ssh-agent -k'
+
+# Screenshot to image.png
+alias sc='sleep 10;import -display :0.0 -window root image.png'
+
+#================== Suffix Aliases =================#
+alias -s tex=vim
+alias -s txt=vim
+alias -s html=firefox
+alias -s org=firefox
+alias -s com=firefox
+alias -s in=firefox
+#==================================================#
+
+#================= Global Aliases =================#
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+alias -g L="| less"
+alias -g LL="2>&1 | less"
+alias -g M='| most'
+alias -g G='| grep'
+alias -g H='| head'
+alias -g HL='|& head -20'
+alias -g TL='| tail -20'
+alias -g T='| tail'
+alias -g DN=/dev/null
+alias -g S='| sort'
+alias -g SH='| sort -hr'
+alias -g HS='| sort -hr'
+alias -g NS='| sort -n'
+alias -g RNS='| sort -nr'
+alias -g US='| sort -u'
+alias -g C='| wc -l'
+alias -g NE="2> /dev/null"
+alias -g NUL="> /dev/null 2>&1"
+alias -g X='| xargs'
+alias -g CA="2>&1 | cat -A"
+alias -g D="DISPLAY=:0.0"
+alias -g ED="export DISPLAY=:0.0"
+alias -g EG='|& egrep'
+alias -g EH='|& head'
+alias -g EL='|& less'
+alias -g ELS='|& less -S'
+alias -g ETL='|& tail -20'
+alias -g ET='|& tail'
+alias -g F=' | fmt -'
+alias -g Sk="*~(*.bz2|*.gz|*.tgz|*.zip|*.z)"
+alias -g LS='| less -S'
+alias -g MO='| more'
+alias -g PIPE='|'
+alias -g R=' > /c/aaa/tee.txt '
+alias -g VM=/var/log/messages
+alias -g X0G='| xargs -0 egrep'
+alias -g X0='| xargs -0'
+alias -g XG='| xargs egrep'
+#=================================================#

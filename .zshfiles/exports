@@ -1,0 +1,5 @@
+export LESS="-R"
+eval $(dircolors -b)
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/mike/bin
+export EDITOR=vim
+export SVN_EDITOR=vim

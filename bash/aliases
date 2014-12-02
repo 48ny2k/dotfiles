@@ -29,6 +29,8 @@ alias updb='sudo updatedb'
 alias tc="tail /var/log/syslog | ccze -A"
 alias tx="tail .xsession-errors | ccze -A"
 alias md5="md5sum"                        # check md5sum from stated dir/file
+alias b='bash'
+alias yt='youtube-dl -f 135 $1 ~/Downloads'
 alias wee='weechat'
 alias ac="aria2c -T"
 alias sq='sudo lsof -i -n -P | grep squid3'
@@ -43,11 +45,14 @@ alias bm="cd /media/mike/cb8442d4-23d4-40fb-b26c-fefbe65d6cb7/backup && ls -alhr
 alias p='pwd'
 alias dis="discover"
 alias ch='c && h'
-alias uc='crontab -u mike ~/Documents/crontab.txt'
-alias t='tmux'
+alias cu='crontab -u mike ~/Documents/crontab.txt'
+alias cl='crontab -l ~/Documents/crontab.txt'
+alias t='tmux -2'
 alias vv='vim .vimrc'
 alias aa='vim ~/.bash/aliases'
 alias vcs='vim ~/Documents/vim_related/vim-cheat-sheet-2.txt' 
+alias gl='vim ~/Documents/grocery-list.txt'
+alias fh='vim ~/Documents/flr_history.txt'
 alias vr='cd Documents/vim_related && la'
 alias hub='cd ~/github'
 alias clone='git clone https://github.com/48ny2k/dotfiles'
@@ -59,6 +64,9 @@ alias st='dot && git status'
 alias cu='crontab -u mike ~/Documents/crontab.txt'
 alias cl='crontab -l'
 alias dr='cd ~/Documents/Recipes && la'
+alias ra='ranger'
+alias s='stock'
+alias vbb='cd ~/Documents/.bashrc.bakup'
 
 #############################################
 ####### Aliases for Arch and Manjaro ########
