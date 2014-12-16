@@ -14,8 +14,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-markdown'
-" Plugin 'bling/vim-airline'
-Plugin 'Lokaltog/powerline'
+Plugin 'bling/vim-airline'
+" Plugin 'Lokaltog/powerline'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'Lokaltog/powerline-fonts'
 Plugin 'runsisi/consolas-font-for-powerline'
@@ -107,7 +107,7 @@ set fileencodings=utf-8
 set guifont=Ubuntu\ Mono\ for\ Powerline\ 10
 " set guifont=ubuntu-mono-powerline:h10
 " let g:Powerline_symbols = 'fancy'
-let g:airline_powerline_fonts = 1
+let g:airline_unicode_fonts = 1
 let g:airline#extensions#tmuxline#enabled = 1
 
 set tabstop=4             " Number of spaces that a <Tab> in the file counts for.
@@ -208,8 +208,9 @@ if &term =~ '256color'
 " See also http://snk.tuxfamily.org/log/vim-256color-bce.html
 set t_ut=
 endif 
+" ---------------------------------------------------------------------
 colorscheme soruby
-"---------------------------------------------------------------------
+" ---------------------------------------------------------------------
 " autocmd vimenter * NERDTree
 
 "
