@@ -1,0 +1,98 @@
+# Mint Aliases
+######################################################## 
+
+
+alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto'
+alias ll='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias la='ls -Ahlrtp --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias egrep='grep --color=tty -d skip'
+alias ls='ls --color=auto $( if [ -f .hidden ]; then cat .hidden | xargs -I {} echo -n --hide="{}"\ ; fi; )'
+alias ls='ls --color $( if [ -f .hidden ]; then cat .hidden | xargs -I {} echo -n --hide="{}"\ ; fi; )'
+alias cp="cp -i"                          # confirm before overwriting something
+alias df='df -h'                          # human-readable sizes 
+alias dfh='df -h -x supermount'                    
+alias x='exit'                            # exit terminal
+alias c='clear'                           # clear terminal screen
+alias md='mkdir'                          # make dir
+alias del="rm"                            # remove file
+alias p3='ping -c 3 www.google.com'       # ping www.google.com to check connection
+alias leaf='leafpad'                      # open leafpad
+alias inxi='inxi -c 31 -v 4'              # System information
+alias f='free -m'                         # show sizes in MB
+alias pdd="comm -23 <(sudo find / \( -path '/dev' -o -path '/sys' -o -path '/run' -o -path '/tmp' -o -path '/mnt' -o -path '/srv' -o -path '/proc' -o -path '/boot' -o -path '/home' -o -path '/root' -o -path '/media' -o -path '/var/lib/pacman' -o -path '/var/cache/pacman' \) -prune -o -type d -print | sed 's/\([^/]\)$/\1\//' | sort -u) <(pacman -Qlq | sort -u)"
+alias bk="sh /home/mike/bin/backup.sh"    # Script to backup minus exclude.txt 	 
+alias get="sudo apt-get install"
+alias getup="sudo apt-get -y update && sudo apt-get -y upgrade"
+alias remove="sudo apt-get --purge remove"
+alias depend="sudo apt-cache depends"
+alias updb='sudo updatedb'
+alias tc="tail /var/log/syslog | ccze -A"
+alias tx="tail .xsession-errors | ccze -A"
+alias md5="md5sum"                        # check md5sum from stated dir/file
+alias b='bash'
+alias yt='youtube-dl -f 135 $1 ~/Downloads'
+alias wee='weechat'
+alias ac="aria2c -T"
+alias sq='sudo lsof -i -n -P | grep squid3'
+alias sp='sudo lsof -i -n -P | grep proxy'
+alias 3128='sudo lsof -i -n -P | grep 3128'
+alias h='cd /home/mike'
+alias do="cd Downloads && la"
+alias doc="cd Documents && la"
+alias pic="cd Pictures && la"
+alias vid='cd Videos && la'
+alias bm="cd /backup/cinnamon-backup/mike/ && ls -alhr -St && h"
+alias p='pwd'
+alias dis="discover"
+alias ch='c && h'
+alias cu='crontab -u mike ~/Documents/crontab.txt'
+alias cl='crontab -l ~/Documents/crontab.txt'
+alias t='tmux -2'
+alias vv='vim .vimrc'
+alias aa='vim ~/.bash/aliases'
+alias vcs='vim ~/Documents/vim_related/vim-cheat-sheet-2.txt' 
+alias gl='vim ~/Documents/grocery-list.txt'
+alias fh='vim ~/Documents/flr_history.txt'
+alias vr='cd Documents/vim_related && la'
+alias hub='cd ~/github'
+alias clone='git clone https://github.com/48ny2k/dotfiles'
+alias dot='cd ~/github/dotfiles'
+alias ga='git add -A'
+alias gc='git commit -m'
+alias gp='git push origin master'
+alias st='dot && git status'
+alias cu='crontab -u mike ~/Documents/crontab.txt'
+alias cl='crontab -l'
+alias dr='cd ~/Documents/Recipes && la'
+alias ra='ranger'
+alias s='stock'
+alias vbb='cd ~/Documents/.bashrc.bakup'
+
+#############################################
+####### Aliases for Arch and Manjaro ########
+#############################################
+
+# LS_COLORS="no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ex=01;32:*.tar=01;31:*.tgz=01;31:*.svgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:"
+
+
+# alias nx='nano .xinitrc'                # edit xinitrc to startx
+# alias s='startx'
+# alias y='yaourt'
+# alias yr='yaourt -R'
+# alias ys='yaourt -S'
+# alias wee='weechat'
+# alias pacro="/usr/bin/pacman -Qtdq > /dev/null && sudo /usr/bin/pacman -Rns \$(/usr/bin/pacman -Qtdq | sed -e ':a;N;\$!ba;s/\n/ /g')"      # [r]emove [o]rphans' - recursively remove ALL orphaned packages
+# alias backup='sh rsync-script.sh'            # Script to backup ~/.config 
+# alias mk="sh /home/mike/.bin/mhwd-kern.sh"   # calls MHWD-Kernel commands via script/menu
+# alias scron="su -c $(printf "%q" "crontab -e")"
+# alias as="su /home/mike/bin/allservers.sh"
+# alias ps='sudo pacman -S'               # Install specific package(s) from the repositories
+# alias psy='sudo pacman -Syu'            # Synchronize with repositories and then upgrade packages that are out of date on the local system.
+# alias pss='sudo pacman -Ss'             # Search for package(s) in the repositories 
+# alias prns='sudo pacman -Rns'           # Remove the specified package(s), its configuration(s) and unneeded dependencies
+# # alias a3='archey3 -c yellow'          # Shortcut to Archey3
+# alias cc='sudo cacheclean -v 2'         # Deletes all but the last two versions of installed packages in the pacman cache
+# alias yt="sh /home/mike/bin/youtubeview.sh"
+#
+#
+# 
